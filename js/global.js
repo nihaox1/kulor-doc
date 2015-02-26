@@ -14335,7 +14335,7 @@ var requirejs, require, define;
     //Set up with config info.
     req(cfg);
 }(this));;require.config({
-    baseUrl     : "kulor-doc/",
+    baseUrl     : "/kulor-doc",
     paths   : {
         "Base"          : "js/unit/base" ,
         "Ajax"          : "js/unit/ajax" ,
