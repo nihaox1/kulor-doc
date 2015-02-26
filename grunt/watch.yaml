@@ -1,0 +1,71 @@
+options:
+  livereload: true
+  spawn: false
+
+images:
+  files:
+    - <%= src %>/images/*.*
+    - <%= src %>/images/**/*.*
+    - <%= doc %>/images/**/*.*
+  tasks:
+    - copy:images-dev
+
+fonts:
+  files:
+    - <%= src %>/fonts/*.*
+  tasks:
+    - copy:fonts-dev
+
+css:
+  files:
+    - <%= src %>/css/*.*
+  tasks:
+    - copy:css-dev
+
+js:
+  files:
+    - <%= src %>/js/*.js
+    - <%= src %>/js/**/*.js
+    - <%= src %>/subs/**/*.js
+    - <%= doc %>/js/**/*.js
+    - <%= doc %>/subs/**/*.js
+    - <%= doc %>/markdown/**/*.js
+  tasks:
+    - copy:js-dev
+    - copy:lib-dev
+    - copy:hoot-dev
+    - copy:js-dev-sub
+    - copy:doc-js-dev
+    - copy:doc-js-dev-sub
+    - copy:doc-js-dev-markdown
+
+less:
+  files:
+    - <%= src %>/less/*.less
+    - <%= src %>/less/**/*.less
+    - <%= src %>/subs/**/*.less
+    - <%= doc %>/less/**/*.less
+    - <%= doc %>/subs/**/*.less
+  tasks:
+    - less
+
+jade:
+  files:
+    - <%= src %>/*.jade
+    - <%= src %>/template/*.jade
+    - <%= src %>/layout/*.jade
+    - <%= src %>/layout/**/*.jade
+    - <%= src %>/subs/**/*.jade
+    - <%= src %>/page/**/*.jade
+    - <%= doc %>/subs/**/*.jade
+    - <%= doc %>/*.jade
+    - <%= doc %>/markdown/*.jade
+  tasks:
+    - jade
+    - listcsslink
+
+manifest:
+  files:
+    - <%= src %>/*.json
+  tasks:
+    - copy:manifest

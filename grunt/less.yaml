@@ -1,0 +1,35 @@
+options:
+    paths:
+        - _base
+        - _partial
+        - _element
+
+files:
+    expand  : true
+    cwd     : <%= src%>/less
+    src     : '*.less'
+    dest    : <%= dev%>/css
+    ext     : '.css'
+
+subs:
+    expand  : true
+    flatten : true
+    cwd     : <%= src%>/subs/
+    src     : "**/*.less"
+    dest    : <%= dev%>/css/subs
+    ext     : ".css"
+
+doc:
+    expand  : true
+    cwd     : <%= doc %>/less
+    src     : '*.less'
+    dest    : <%= dev%>/css
+    ext     : '.css'
+
+docSubs:
+    expand  : true
+    flatten : true
+    cwd     : <%= doc %>/subs/
+    src     : '**/*.less'
+    dest    : <%= dev%>/css/subs
+    ext     : '.css'
