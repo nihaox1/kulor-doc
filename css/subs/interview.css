@@ -1,0 +1,71 @@
+.interviewContainer {
+  width: 100%;
+}
+.interviewContainer h3 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+.interviewContainer ul {
+  width: 100%;
+  margin-left: -5%;
+}
+.interviewContainer ul li {
+  width: 30%;
+  padding: 25px 50px;
+  margin: 0 5% 10px;
+  border: 1px solid #ccc;
+  float: left;
+  text-align: center;
+  box-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+}
+.interviewContainer ul li:hover {
+  box-shadow: 2px 2px 1px #aaa;
+}
+.interviewContainer ul li span {
+  line-height: 50px;
+  font-size: 50px;
+  color: #fff;
+}
+.interviewContainer ul li span b {
+  line-height: 50px;
+  font-size: 35px;
+  color: #fff;
+  font-weight: bolder;
+  vertical-align: middle;
+}
+.interviewContainer ul li.grunt-color {
+  background: #e48632;
+}
+.interviewContainer ul li.jade-color {
+  background: #00a86b;
+}
+.interviewContainer ul li.requirejs-color {
+  background: #39f;
+}
+.interviewContainer dl {
+  width: 100%;
+  padding-top: 35px;
+}
+.interviewContainer dl dt {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+.interviewContainer dl dd {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.interviewContainer dl dd span,
+.interviewContainer dl dd a {
+  width: 100px;
+  display: block;
+  float: left;
+}
+.interviewContainer dl dd a {
+  width: auto;
+  text-decoration: none;
+  cursor: pointer;
+}

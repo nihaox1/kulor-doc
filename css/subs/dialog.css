@@ -1,0 +1,45 @@
+.uiSub-dialog-container {
+  width: 500px;
+  padding-bottom: 10px;
+}
+.uiSub-dialog-container,
+.uiSub-dialog-container h5,
+.uiSub-dialog-container div,
+.uiSub-dialog-container a {
+  box-sizing: border-box;
+}
+.uiSub-dialog-container h5.uiSub-dialog-title {
+  width: 100%;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  margin: 0;
+}
+.uiSub-dialog-container h5.uiSub-dialog-title .uiSub-dialog-close {
+  line-height: 35px;
+  right: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+.uiSub-dialog-container h5.uiSub-dialog-title .uiSub-dialog-close:hover {
+  font-weight: bolder;
+}
+.uiSub-dialog-container .uiSub-dialog-content {
+  width: 100%;
+  line-height: 25px;
+  padding: 10px;
+  text-align: center;
+}
+.uiSub-dialog-container .uiSub-btn-footer {
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+}
+.uiSub-dialog-container .uiSub-btn-footer a.btn {
+  width: 40%;
+  margin: 0 5%;
+}
