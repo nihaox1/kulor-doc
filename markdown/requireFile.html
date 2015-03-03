@@ -1,0 +1,33 @@
+<script type="text/kulor-template" id="requireFileMarkdown">###RequireFile类
+RequireFile类实现了对css，js，html，img文件的模块引入功能      
+实例：       <code>requirejs( [ "RequireFile" ] , function( RFS ){       
+-var _rfs = new RequireFile( "css/xxx.css" , function(){ alert( "load css complate" ) } );         
+-_rfs.get( [ "js/xxx.js" , "css/xxxx.css" ] , function(){ alert( "load success" ); } )        
+} )      </code>          
+      
+####RequireFile( filePath , callBack )
+filePath {string} 待引入的文件
+callBack {function} 引入成功后的回调函数
+          
+          
+####filterRequireUrls( filePaths )
+过滤已引入的文件地址
+当再次引入文件时，将默认已拉取过文件
+filePaths {string|array} 文件地址
+          
+          
+####getFile( filePaths , callBack , isOrder )
+引入文件          
+filePaths {string|array} 文件地址               
+callBack {function} 文件引入成功后的回调函数               
+isOrder {boolean} 是否安顺序引入文件  特别是对js文件存在上下文依赖时
+                         
+                         
+####getFileInOrder( filePaths , callBack )
+按顺序引入文件
+filePaths {string|array} 文件地址               
+callBack {function} 文件引入成功后的回调函数          
+          
+          
+####get()
+getFile方法缩写</script>

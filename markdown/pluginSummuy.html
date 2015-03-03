@@ -1,0 +1,28 @@
+<script type="text/kulor-template" id="pluginSummuyMarkdown">###kulor插件类的管理
+kulor对插件的管理，推荐集中式的管理       
+一个简单的目录结构如下：       <code>src       
+&nbsp;&nbsp;&nbsp;&nbsp;subs       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel.jade       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.less       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.js       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dialog       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dialog.jade       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.less       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.js       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.jade       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.less       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.js </code>      
+代码引用时，只需include jade主模块即可         
+jade主模块应包括所有需要引入的css，js文件         
+一个jade主模块代码大至如下：      <code>a.jade文件       
+script(type="text/javascript" , src="js/xxx.js")      
+link(type="text/css" , rel="stylesheet" , href="css/xxx.css")     
+script(type="text/template" , id="xxxid")     
+&nbsp;&nbsp;&nbsp;&nbsp;h3 {{name}}</code>          
+在开发环境代码中引入        <code>index.jade        
+include subs/a/a </code>      
+如上引入即可
+      
+在继承扩展时，和开发代码引入方式一致</script>

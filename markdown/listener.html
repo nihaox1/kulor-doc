@@ -1,0 +1,38 @@
+<script type="text/kulor-template" id="listenerMarkdown">###Listener类
+Listener类可以帮助开发者快速创建一个事件的反向监听         
+在多模块协同工作时，应用较广：       
+您可以如下创建一个listener       <code>requirejs( [ "Listener" ] , function( Listener ){     
+&nbsp;&nbsp;var _listener = new Listener( "btnListener" ),        
+&nbsp;&nbsp;&nbsp;&nbsp;_btns = $( ".btn" );        
+_btns.eq( 0 ).click( function(){      
+&nbsp;&nbsp;_listener.addEventListener( function( str ){ alert( str ); } );      
+} );   
+_btns.eq( 1 ).click( function(){      
+&nbsp;&nbsp;_listener.postListenerMsg( "hi,world" );      
+} );   
+_btns.eq( 2 ).click( function(){      
+&nbsp;&nbsp;_listener.removeEventListener();      
+} );      
+} )        </code>      
+      <a func="add" class="btn btn-success">增加监听事件</a>      <a func="handle" class="btn btn-info">执行反向监听</a>      <a func="remove" class="btn btn-danger">移除所有监听</a>      
+####Listener( id , opt )      
+id 为实例化类的监听名称，它会被记录入下，方便其它模块的查找      
+     
+     
+####addEventListener( func )
+func {function} 待响应的事件方法      
+      
+      
+####removeEventListener( index )
+index     {number|undefined} 待移除事件的索引         
+当index 为undefined时  移除所有的事件监听     
+      
+      
+####postListenerMsg( content... )
+content {*}   任意多参数 任意类型参数         
+          
+          
+####findListener( id )
+id {string} 已注册过的listener名称       
+返回找到的listener类       
+      </script>

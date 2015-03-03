@@ -1,0 +1,28 @@
+<script type="text/kulor-template" id="eventBindMarkdown">###eventBind类
+eventBind类可以帮助开发者快速创建一个基于JQ选择器一对一的事件对应机制体         
+一个简单的例子：<code>requirejs( "EventBind" , function( EventBind ){     
+&nbsp;&nbsp;var _call = function(){ alert( "," )} ,              
+&nbsp;&nbsp;_eb = new EventBind( {       
+&nbsp;&nbsp;".btn[func='w1']::mousedown"     : function(){ alert( "hi" ); } ,        
+&nbsp;&nbsp;".btn[func='w2']::mouseup"     : _call ,     
+&nbsp;&nbsp;".btn[func='w3']::mouseover"     : function(){ alert( "world" ); } ,     
+&nbsp;&nbsp;} , $( document.body ) );        
+} )       </code>      
+      <a func="w1" class="btn btn-success">func=w1</a>      <a func="w2" class="btn btn-info">func=w2</a>      <a func="w3" class="btn btn-warning">func=w3</a>     
+####EventBind( events , $container )
+events {json} 待处理的选择器描述和事件的 一一对应关系         
+$container {JQDOM}    事件绑定的适用范围     
+          
+####addEventBindItems( event , $dom , funcBody )    
+新增一个事件绑定项         
+event      {object}       
+$dom       {JQDOM}     代理的$dom        
+funcBody   {json}      代理的方法集合 默认为this        
+funcBody 可以帮助开发者转移已开发过的方法，对应在event中的事件可以传人字符串     
+实例：       <code> 
+_eb = new EventBind( {} , $( document.body ) );            
+_eb.addEventBindItems( {      
+&nbsp;&nbsp;".btn::click"        : "sayHi"     
+} , $( document.body ) , {        
+&nbsp;&nbsp;sayHi    : function(){ alert( "hi" ); }      
+} );            </code></script>

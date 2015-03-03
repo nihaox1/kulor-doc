@@ -1,0 +1,49 @@
+<script type="text/kulor-template" id="modalViewMarkdown">###MVC结构编码类
+MVC结构编码类  可以快速帮助开发者布局一个前端的mvc机构代码体系               
+声明完成后，开发者只需按业务需求填充对应功能即可                     
+一个简单的例子：<code>requirejs( "ModalView" , function( ModalView ){     
+&nbsp;&nbsp;var _mvc     = new ModalView( "mvcId" , $container , function(){} , { name : "xxxxxx" } );        
+&nbsp;&nbsp;_mvc.addModalEvent( {        
+&nbsp;&nbsp;&nbsp;&nbsp;sayHi    : function(){ alert( "hi,name:" + this.get( "name" ) ); }      
+&nbsp;&nbsp;} ).addViewEvent( {       
+&nbsp;&nbsp;&nbsp;&nbsp;".btn::click"       : "sayHi"       
+&nbsp;&nbsp;} ).init();          
+} )</code>      
+      
+####ModalView( mvcid , $container , initFunc , params )
+mvcid {string} 命名当前的mvc机构         
+$container {JQDOM} 对应的mvc作用范围         
+initFunc {function} 初始化函数                  
+params {json} 内置变量
+          
+####addModalEvent( funcs )
+添加mvc结构方法         
+funcs     {json}                
+      
+####addViewEvent( events )
+绑定mvc结构事件     
+events    {json}      
+      
+####init()
+执行初始化方法   即声明时的initFunc           
+保证代码块存放一致     
+      
+####setPrototypeVal( key , value )
+设置mvc机构的内置变量          
+key   {string|json}   变量名     
+value {...}           变量值  任意结构       
+当key为json时，可以同时设置多个内部变量       
+      
+####set()
+setPrototypeVal方法的缩写      
+      
+####getPrototypeVal( key )
+根据变量名获取变量         
+key {string}  key值支持链式获取 如：user.friends.name      
+      
+####get()
+getPrototypeVal方法的缩写
+      
+      
+####补充:
+ModalView类从Ajax，template，eventBind类上进行了扩展，对应的方法及使用参照对应类</script>

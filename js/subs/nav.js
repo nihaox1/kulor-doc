@@ -43,7 +43,41 @@ requirejs( [ "Template" , "ModalView" ] , function( Template , ModalView ){
                     {
                         name    : "template" ,
                         title   : "Template模板类"
+                    } ,
+                    {
+                        name    : "listener" ,
+                        title   : "listener事件监听类"
+                    } ,
+                    {
+                        name    : "eventBind" ,
+                        title   : "Dom事件绑定类"
+                    } ,
+                    {
+                        name    : "modalView" ,
+                        title   : "MVC结构编码类"
+                    } ,
+                    {
+                        name    : "requireFile" ,
+                        title   : "RequireFile类"
                     }
+                ]
+            } , 
+            {
+                title       : "插件文档" ,
+                subs        : [
+                    {
+                        name    : "pluginSummuy" ,
+                        title   : "概述"
+                    }
+                    // } ,
+                    // {
+                    //     name    : "panel" ,
+                    //     title   : "panel弹出层"
+                    // } ,
+                    // {
+                    //     name    : "dialog" ,
+                    //     title   : "dialog对话框"
+                    // }
                 ]
             }
         ] ,

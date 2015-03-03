@@ -1,5 +1,5 @@
 require.config({
-    baseUrl     : "kulor-doc/",
+    baseUrl     : "/",
     paths   : {
         "Base"          : "js/unit/base" ,
         "Ajax"          : "js/unit/ajax" ,
